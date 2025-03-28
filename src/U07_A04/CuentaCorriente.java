@@ -2,6 +2,7 @@
 package U07_A04;
 
 public class CuentaCorriente {
+    //Codigo nombre Banco
     static private String nombreBanco = "Banco Internacional Español";
     static void setBanco(String nuevoNombre){
         nombreBanco = nuevoNombre;
@@ -10,6 +11,8 @@ public class CuentaCorriente {
     static String getBanco(){
         return nombreBanco;
     }
+    
+    //Codigo antiguo
     String dni;
     public String nombre;
     private double saldo;
