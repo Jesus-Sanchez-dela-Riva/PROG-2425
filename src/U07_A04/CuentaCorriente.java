@@ -2,30 +2,19 @@
 package U07_A04;
 
 public class CuentaCorriente {
-    String DNI;
-    String nombre;
-    double saldo;
-    CuentaCorriente(){
-        this.DNI= "";
-        this.nombre= "";
-        this.saldo= 0.0;
+    static private String nombreBanco = "Banco Internacional Español";
+    static void setBanco(String nuevoNombre){
+        nombreBanco = nuevoNombre;
     }
-    CuentaCorriente(String DNI, String nombre, double saldoInicial){
-        this.DNI=DNI;
-        this.nombre=nombre;
-        this.saldo=saldoInicial;
-    }
-    CuentaCorriente(String DNI, double saldoInicial){
-        this(DNI,"",saldoInicial);
-    }
-    CuentaCorriente(String DNI, String nombre){
-        this.DNI=DNI;
-        this.nombre=nombre;
-        this.saldo=0.0;
-    } 
     
-    
-    boolean sacarDinero(double cantidad){
+    static String getBanco(){
+        return nombreBanco;
+    }
+    String dni;
+    public String nombre;
+    private double saldo;
+
+   boolean sacarDinero(double cantidad){
         if(cantidad<=0){
             System.out.println("La cantidad que desea retirar es indebida, debe ser mayor que 0");
             return false;
@@ -47,9 +36,19 @@ public class CuentaCorriente {
             System.out.println("No se puede ingresar 0 euros o dinero negativo");
         }
     }
-    void mostrarInformación(){
+    void mostrarInformacion(){
         System.out.println("Nombre del titular: "+nombre);
-        System.out.println("DNI del titular: "+DNI);
+        System.out.println("DNI del titular: "+dni);
         System.out.println("Saldo de la cuenta: "+saldo+"€");
+    }
+
+   CuentaCorriente(String dni, String nombre) { 
+      this(dni, nombre, 0); 
+   }
+
+   CuentaCorriente(String dni, String nombre, double saldoInicial){
+        this.dni=dni;
+        this.nombre=nombre;
+        this.saldo=saldoInicial;
     }
 }
