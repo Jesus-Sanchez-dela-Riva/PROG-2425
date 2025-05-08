@@ -3,19 +3,17 @@ package U_10;
 import java.util.Scanner;
 public class U10_A01 {
     public static Integer leerEntero(){
-        Scanner sc = new Scanner(System.in);
-        Integer numero=null;
+        Integer n=null;
         while(true){
-            System.out.println("Introduce un numero entero: ");
-            String n=sc.nextLine();
             try{
-                numero = Integer.parseInt(n);
+                System.out.println("Introduce un numero entero: ");
+                n=new Scanner(System.in).nextInt();
                 break;
-            }catch(NumberFormatException e){
+            }catch(Exception e){
                 System.out.println("Error, no has metido un numero entero, vas a tener que volver a meter un numero");
             }
         }
-        return numero;
+        return n;
     }
     public static void main(String[] args){
         Integer leido=leerEntero();
