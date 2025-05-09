@@ -6,11 +6,10 @@ public class U10_A03 {
         BufferedReader in = null;
         try{
             in=new BufferedReader(new FileReader("C:\\Users\\jesus\\OneDrive\\Documentos\\NetBeansProjects\\PROG-24_25\\src\\U_10\\Main.java"));
-            int letras;
-            while((letras=in.read())!= -1){
-                System.out.print((char)letras);
+            String letras;
+            while((letras=in.readLine())!= null){
+                System.out.print(letras+"\n");
             }
-            in.close();
         }catch(IOException ex){
             System.out.println("Ha ocurrido un error al leer: "+ex.getMessage());
         }finally{
