@@ -3,8 +3,6 @@ package U_10;
 import java.io.*;
 public class U10_A02 {
     public static void main(String[] args){
-        
-        
         try{
             FileReader in=new FileReader("C:\\Users\\jesus\\OneDrive\\Documentos\\NetBeansProjects\\PROG-24_25\\src\\U_10\\Main.java");
             int letras;
